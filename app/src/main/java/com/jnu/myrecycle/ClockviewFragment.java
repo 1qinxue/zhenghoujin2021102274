@@ -1,22 +1,30 @@
 package com.jnu.myrecycle;
 
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import java.util.Calendar;
 
-public class VedioFragment extends Fragment {
+
+public class ClockviewFragment extends Fragment {
 
 
-    public VedioFragment() {
+    public EditText editTextTime2;
+    public ClockviewFragment() {
         // Required empty public constructor
     }
 
-    public static VedioFragment newInstance(String param1, String param2) {
-        VedioFragment fragment = new VedioFragment();
+    public static ClockviewFragment newInstance(String param1, String param2) {
+        ClockviewFragment fragment = new ClockviewFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -33,7 +41,8 @@ public class VedioFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_clockview, container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_vedio, container, false);
+        return view;
     }
 }

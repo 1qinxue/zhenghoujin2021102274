@@ -148,44 +148,20 @@
 package com.jnu.myrecycle;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
-import com.jnu.myrecycle.data.Book;
-import com.jnu.myrecycle.data.DataBank;
 
-import android.app.Activity;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.ContextMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContracts;
+
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
-import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
-//    private ActivityResultLauncher<Intent> itemLauncher;
-//    private ActivityResultLauncher<Intent> imageLauncher_new;
-//
-//    private ArrayList<Book> books = new ArrayList<>();
-//    private CustomAdapter adapter;
-//    int position_id = 0;
-    public String []tabName={"图书","新闻","地图","视频"};
+    public String []tabName={"图书","新闻","地图","时钟"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -209,17 +185,13 @@ public class MainActivity extends AppCompatActivity {
         public Fragment createFragment(int position) {
             switch (position) {
                 case 0:
-                    Toast.makeText(MainActivity.this, "1", Toast.LENGTH_SHORT).show();
                     return new BookFragment();
                 case 1:
-                    Toast.makeText(MainActivity.this, "2", Toast.LENGTH_SHORT).show();
                     return new WebFragment();
                 case 2:
-                    Toast.makeText(MainActivity.this, "3", Toast.LENGTH_SHORT).show();
                     return new BaiduMapFragment();
                 case 3:
-                    Toast.makeText(MainActivity.this, "4", Toast.LENGTH_SHORT).show();
-                    return new VedioFragment();
+                    return new ClockviewFragment();
                 default:
                     return null;
             }
