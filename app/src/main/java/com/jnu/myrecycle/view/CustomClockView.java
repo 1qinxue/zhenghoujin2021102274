@@ -2,35 +2,21 @@ package com.jnu.myrecycle.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-
 import com.jnu.myrecycle.R;
-
-import java.time.LocalDateTime;
 import java.util.Calendar;
-import java.util.Date;
-import java.util.logging.Handler;
-import java.util.logging.LogRecord;
 
-public class ClockView extends View {
+public class CustomClockView extends View {
     private int mHour,mMinute,mSecond;
     private Drawable clockBackground;
     private Drawable hourHand,minuteHand,secondHand;
     float centerX,centerY;
-
-
     private android.os.Handler mHandler;
     private Runnable mRunnable;
-    public ClockView(Context context) {
+    public CustomClockView(Context context) {
         super(context);
         init();
     }
@@ -52,12 +38,12 @@ public class ClockView extends View {
                 // 创建Toast显示当前时间
                 Toast.makeText(getContext(), "Current time: " + mHour + ":" + mMinute + " : " + mSecond, Toast.LENGTH_SHORT).show();
                 // 每五秒后再次执行Runnable
-                mHandler.postDelayed(this, 5000);
+                mHandler.postDelayed(this, 60000);
             }
         };
         mHandler.postDelayed(mRunnable, 5000);
 }
-    public ClockView(Context context, AttributeSet attrs) {
+    public CustomClockView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
     }
@@ -72,7 +58,6 @@ public class ClockView extends View {
         clockBackground.draw(canvas);
 
         Calendar calendar = Calendar.getInstance();
-
 
         setTime(calendar.get(Calendar.HOUR), calendar.get(Calendar.MINUTE), calendar.get(Calendar.SECOND));
         // 绘制时针
