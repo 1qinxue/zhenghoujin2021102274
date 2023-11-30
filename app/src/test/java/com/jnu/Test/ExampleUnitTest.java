@@ -1,4 +1,4 @@
-package com.jnu.myrecycle;
+package com.jnu.Test;
 
 import org.junit.Test;
 

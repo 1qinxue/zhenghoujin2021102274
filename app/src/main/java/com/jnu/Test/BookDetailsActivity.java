@@ -45,9 +45,9 @@
 //
 //}
 
-package com.jnu.myrecycle;
-import static com.jnu.myrecycle.R.id;
-import static com.jnu.myrecycle.R.layout;
+package com.jnu.Test;
+import static com.jnu.Test.R.id;
+import static com.jnu.Test.R.layout;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -64,7 +64,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import com.jnu.myrecycle.data.Book;
+
+import com.jnu.Test.data.Book;
 import java.util.ArrayList;
 
 public class BookDetailsActivity extends AppCompatActivity {

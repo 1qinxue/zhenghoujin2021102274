@@ -1,9 +1,6 @@
-package com.jnu.myrecycle;
+package com.jnu.Test;
 
 import android.app.Application;
-import android.os.Bundle;
-
-import com.tencent.tencentmap.mapsdk.maps.MapView;
 
 public class MyApplication extends Application {
     @Override

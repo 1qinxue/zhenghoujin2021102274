@@ -1,4 +1,4 @@
-package com.jnu.myrecycle;
+package com.jnu.Test;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.jnu.myrecycle.data.ShopDownloader;
-import com.jnu.myrecycle.data.ShopLocation;
+import com.jnu.Test.data.ShopDownloader;
+import com.jnu.Test.data.ShopLocation;
 import com.tencent.tencentmap.mapsdk.maps.CameraUpdate;
 
 import androidx.annotation.NonNull;
@@ -28,7 +28,6 @@ import com.tencent.tencentmap.mapsdk.maps.model.LatLng;
 import com.tencent.tencentmap.mapsdk.maps.model.Marker;
 import com.tencent.tencentmap.mapsdk.maps.model.MarkerOptions;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 public class BaiduMapFragment extends Fragment {

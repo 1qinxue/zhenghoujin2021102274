@@ -1,4 +1,4 @@
-package com.jnu.myrecycle;
+package com.jnu.Test;
 
 import static android.app.Activity.RESULT_CANCELED;
 
@@ -23,8 +23,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.jnu.myrecycle.data.Book;
-import com.jnu.myrecycle.data.DataBank;
+import com.jnu.Test.data.Book;
+import com.jnu.Test.data.DataBank;
 
 import java.util.ArrayList;
 

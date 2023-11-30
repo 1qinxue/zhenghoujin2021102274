@@ -1,5 +1,4 @@
-package com.jnu.myrecycle.view;
-import android.app.Activity;
+package com.jnu.Test.view;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -18,8 +17,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import com.jnu.myrecycle.MainActivity;
-import com.jnu.myrecycle.R;
+import com.jnu.Test.R;
 import java.util.ArrayList;
 public class WhackAMoleView extends SurfaceView implements SurfaceHolder.Callback {
     private MoleThread moleThread;
@@ -112,6 +110,7 @@ public class WhackAMoleView extends SurfaceView implements SurfaceHolder.Callbac
 
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                invalidate();
                 Toast.makeText(getContext(), "30倒计时开始", Toast.LENGTH_SHORT).show();
                 button.setVisibility(View.GONE);
                 startGameCountdown();

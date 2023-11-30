@@ -1,4 +1,4 @@
-package com.jnu.myrecycle.data;
+package com.jnu.Test.data;
 
 import java.io.Serializable;
 

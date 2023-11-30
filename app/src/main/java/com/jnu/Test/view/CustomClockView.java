@@ -1,4 +1,4 @@
-package com.jnu.myrecycle.view;
+package com.jnu.Test.view;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -6,7 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.Toast;
-import com.jnu.myrecycle.R;
+import com.jnu.Test.R;
 import java.util.Calendar;
 
 public class CustomClockView extends View {

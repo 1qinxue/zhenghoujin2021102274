@@ -1,4 +1,4 @@
-package com.jnu.myrecycle;
+package com.jnu.Test;
 
 import android.app.Activity;
 import android.content.Intent;
