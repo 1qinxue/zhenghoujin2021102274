@@ -112,6 +112,7 @@ public class WhackAMoleView extends SurfaceView implements SurfaceHolder.Callbac
             public void onClick(DialogInterface dialog, int which) {
                 invalidate();
                 Toast.makeText(getContext(), "30倒计时开始", Toast.LENGTH_SHORT).show();
+                hitNum=0;
                 button.setVisibility(View.GONE);
                 startGameCountdown();
             }
@@ -119,7 +120,6 @@ public class WhackAMoleView extends SurfaceView implements SurfaceHolder.Callbac
         builder.setNegativeButton("取消", null);
         builder.show();
     }
-
     private void startGameCountdown() {
         new CountDownTimer(30000, 1000) {
             public void onTick(long millisUntilFinished) {

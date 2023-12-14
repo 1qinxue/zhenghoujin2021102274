@@ -120,10 +120,6 @@ public class BookFragment extends Fragment {
                 });
         return rootView;
     }
-    private String getAdapterPosition() {
-        return "position:" + this.getAdapterPosition();
-    }
-
     public boolean onContextItemSelected(MenuItem item){
         switch (item.getItemId()){
             case 0:
